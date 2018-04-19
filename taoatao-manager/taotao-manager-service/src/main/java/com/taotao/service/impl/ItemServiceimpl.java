@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
+
 /**
  * Created by john on 2018-04-17.
  */
@@ -16,8 +18,8 @@ public class ItemServiceimpl implements ItemService {
     @Autowired
     private TbItemMapper emService;
 
-    public TbItem findItem(Long id){
+    public List<TbItem> findItem(){
 
-        return   emService.selectByPrimaryKey(id);
+        return   emService.selectByPrimaryKey();
     }
 }
