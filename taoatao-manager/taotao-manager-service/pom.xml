@@ -109,7 +109,12 @@
 
 
 
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
 
+            <scope>test</scope>
+        </dependency>
 
 
 
@@ -186,6 +191,11 @@
             <artifactId>zkclient</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+
+        </dependency>
 
 
 
