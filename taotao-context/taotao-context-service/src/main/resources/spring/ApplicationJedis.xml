@@ -17,11 +17,37 @@
 		http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
 		http://www.springframework.org/schema/mvc
        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
-
+        <!--开启注解-->
+        <context:annotation-config/>
+       <!-- redis单机版-->
         <bean id="jedisPool" class="redis.clients.jedis.JedisPool">
-             <constructor-arg name="host" value=""/>
-
-
+             <constructor-arg name="host" value="47.106.154.159"/>
+             <constructor-arg name="port" value="6379"/>
         </bean>
+
+      <bean id="jedisClientPool" class="com.taotao.jedis.JedisClientPool"></bean>
+
+      <!--redis集群版-->
+      <!--  <bean id="jedisCluster" class="redis.clients.jedis.JedisCluster">
+           <constructor-arg>
+                <set>
+                    <bean class="redis.clients.jedis.HostAndPort">
+                        <constructor-arg name="host" value="47.106.154.159"/>
+                        <constructor-arg name="port" value="6379"/>
+                    </bean>
+
+                    <bean class="redis.clients.jedis.HostAndPort">
+                        <constructor-arg name="host" value="47.106.154.159"/>
+                        <constructor-arg name="port" value="6379"/>
+                    </bean>
+                    <bean class="redis.clients.jedis.HostAndPort">
+                        <constructor-arg name="host" value="47.106.154.159"/>
+                        <constructor-arg name="port" value="6379"/>
+                    </bean>
+                </set>
+           </constructor-arg>
+
+        </bean>-->
+
 
 </beans>

@@ -36,6 +36,9 @@
     <orderEntry type="library" name="Maven: jstl:jstl:1.2" level="project" />
     <orderEntry type="module" module-name="taotao-manger-interface" />
     <orderEntry type="module" module-name="taotao-common" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.4.2" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.4.0" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.4.2" level="project" />
     <orderEntry type="module" module-name="taotao-manager-pojo" />
     <orderEntry type="module" module-name="taotao-manager-dao" />
     <orderEntry type="library" name="Maven: org.mybatis:mybatis:3.2.8" level="project" />

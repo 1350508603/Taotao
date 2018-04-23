@@ -22,7 +22,7 @@ public class jeds {
         jedis.close();*/
 
     //连接池操作NOSQL
-/*  JedisPool   je=new JedisPool("47.106.154.159",6379);
+ JedisPool   je=new JedisPool("47.106.154.159",6379);
         //获取连接
         Jedis  j=je.getResource();
         //使用jds操作redis
@@ -30,7 +30,7 @@ public class jeds {
         String bu=j.get("kl");
         System.out.print(bu);
         j.close();
-        je.close();*/
+        je.close();
 
     }
     //通过JedisCluster对象连接集群操作数据库
