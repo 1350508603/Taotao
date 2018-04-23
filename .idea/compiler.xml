@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="pagehelper" />
+        <module name="taotao-common" />
+        <module name="taotao-context-interface" />
+        <module name="taotao-context-service" />
+        <module name="taotao-manager-dao" />
+        <module name="taotao-manager-intreface" />
+        <module name="taotao-manager-pojo" />
+        <module name="taotao-manager-service" />
+        <module name="taotao-manager-web" />
+        <module name="taotao-porta-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="pagehelper" target="1.7" />
+      <module name="taoatao-manager" target="1.7" />
+      <module name="taotao-common" target="1.7" />
+      <module name="taotao-context" target="1.7" />
+      <module name="taotao-context-interface" target="1.7" />
+      <module name="taotao-context-service" target="1.7" />
+      <module name="taotao-manager-dao" target="1.7" />
+      <module name="taotao-manager-intreface" target="1.7" />
+      <module name="taotao-manager-pojo" target="1.7" />
+      <module name="taotao-manager-service" target="1.7" />
+      <module name="taotao-manager-web" target="1.7" />
+      <module name="taotao-manger-interface" target="1.7" />
+      <module name="taotao-parent" target="1.7" />
+      <module name="taotao-porta-web" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

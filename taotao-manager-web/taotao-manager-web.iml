@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
+    <facet type="Spring" name="Spring">
+      <configuration />
+    </facet>
     <facet type="web" name="Web">
       <configuration>
         <descriptors>
@@ -11,9 +14,6 @@
         </webroots>
       </configuration>
     </facet>
-    <facet type="Spring" name="Spring">
-      <configuration />
-    </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7">
     <output url="file://$MODULE_DIR$/target/classes" />
@@ -23,24 +23,20 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
-    <orderEntry type="jdk" jdkName="1.7" jdkType="JavaSDK" />
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="jsp-api" level="project" />
-    <orderEntry type="library" name="servlet-api" level="project" />
     <orderEntry type="library" name="Maven: commons-logging:commons-logging:1.2" level="project" />
+    <orderEntry type="module" module-name="taotao-common" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.4.2" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.4.0" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.4.2" level="project" />
     <orderEntry type="library" name="Maven: commons-fileupload:commons-fileupload:1.3.1" level="project" />
     <orderEntry type="library" name="Maven: commons-io:commons-io:1.3.2" level="project" />
     <orderEntry type="library" name="Maven: commons-lang:commons-lang:2.6" level="project" />
     <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:javax.servlet-api:3.0.1" level="project" />
     <orderEntry type="library" name="Maven: jstl:jstl:1.2" level="project" />
-    <orderEntry type="module" module-name="taotao-manger-interface" />
-    <orderEntry type="module" module-name="taotao-common" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.4.2" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.4.0" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.4.2" level="project" />
-    <orderEntry type="module" module-name="taotao-manager-pojo" />
-    <orderEntry type="module" module-name="taotao-manager-dao" />
+    <orderEntry type="module" module-name="taotao-manager-intreface" />
     <orderEntry type="library" name="Maven: org.mybatis:mybatis:3.2.8" level="project" />
     <orderEntry type="library" name="Maven: org.mybatis:mybatis-spring:1.2.3" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.6" level="project" />
@@ -48,7 +44,7 @@
     <orderEntry type="module-library">
       <library name="Maven: com.alibaba:jconsole:1.8.0">
         <CLASSES>
-          <root url="jar://C:/Program Files (x86)/Java/jdk1.7/lib/jconsole.jar!/" />
+          <root url="jar://C:/Program Files (x86)/Java/jdk1.7.0_60/lib/jconsole.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -57,12 +53,14 @@
     <orderEntry type="module-library">
       <library name="Maven: com.alibaba:tools:1.8.0">
         <CLASSES>
-          <root url="jar://C:/Program Files (x86)/Java/jdk1.7/lib/tools.jar!/" />
+          <root url="jar://C:/Program Files (x86)/Java/jdk1.7.0_60/lib/tools.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module" module-name="taotao-manager-pojo" />
+    <orderEntry type="module" module-name="taotao-manager-dao" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:4.1.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:4.1.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-core:4.1.3.RELEASE" level="project" />

@@ -19,8 +19,9 @@
     <modules>
         <module>taotao-manager-dao</module>
         <module>taotao-manager-pojo</module>
-        <module>taotao-manger-interface</module>
+
         <module>taotao-manager-service</module>
+        <module>taotao-manager-intreface</module>
     </modules>
 
     <properties>

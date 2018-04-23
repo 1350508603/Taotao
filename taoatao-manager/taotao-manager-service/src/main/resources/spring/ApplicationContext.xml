@@ -57,7 +57,7 @@
 	</bean>
 
 	<!-- 配置注解 -->
-	<context:component-scan base-package="com.taotao.service.impl" />
+	<context:component-scan base-package="com.taotao.test.serviceimpl" />
 
 	<!-- 声明式事务 -->
 	<!-- 定义事务管理器Bean，并为其注入数据源Bean -->
@@ -94,6 +94,6 @@
 	<!-- 用dubbo协议在20880端口暴露服务 -->
 	<dubbo:protocol name="dubbo" port="20880" />
 	<!-- 声明需要暴露的服务接口 -->
-	<dubbo:service interface="com.taotao.service.ItemService" ref="itemServiceimpl" timeout="300000"/>
+	<dubbo:service interface="com.taotao.intreface.TbItemService" ref="tbItemServiceimpl" timeout="300000"/>
 
 </beans>

@@ -29,6 +29,11 @@
             <artifactId>commons-logging</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.taotao</groupId>
+            <artifactId>taotao-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
             <groupId>commons-fileupload</groupId>
             <artifactId>commons-fileupload</artifactId>
         </dependency>
@@ -63,8 +68,8 @@
             <artifactId>jstl</artifactId>
         </dependency>
         <dependency>
-            <artifactId>taotao-manger-interface</artifactId>
             <groupId>com.taotao</groupId>
+            <artifactId>taotao-manager-intreface</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>

@@ -4,12 +4,11 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * Created by john on 2018-04-21.
+ * Created by admin on 2018/4/23.
  */
-public class EasyUiPage implements Serializable {
+public class EasyUIDataGridResult implements Serializable{
 
-    private long total;
-
+    private  long total;
     private List rows;
 
     public long getTotal() {
