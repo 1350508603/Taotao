@@ -1,6 +1,8 @@
 package com.taotao.intreface;
 
+import com.taoato.util.TaotaoResult;
 import com.taotao.pojo.EasyUIDataGridResult;
+import com.taotao.pojo.TbItem;
 
 /**
  * Created by admin on 2018/4/23.
@@ -10,6 +12,7 @@ public interface TbItemService {
 
     EasyUIDataGridResult gteItemList(int page , int rows);
 
+    TaotaoResult addItem(TbItem item,String decs);
  /*   int countByExample(TbItemExample example);
 
     int deleteByExample(TbItemExample example);

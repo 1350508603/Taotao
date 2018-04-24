@@ -31,8 +31,8 @@
 	</mvc:annotation-driven>
 	<!-- 引入静态资源 -->
 	<mvc:default-servlet-handler/>
-	<mvc:resources mapping="/css/" location="/css/**"></mvc:resources>
-	<mvc:resources mapping="/js/" location="/css/**"></mvc:resources>
+	<!--<mvc:resources mapping="/css/" location="/css/**"></mvc:resources>
+	<mvc:resources mapping="/js/" location="/css/**"></mvc:resources>-->
 	<!-- 视图解析器 -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsp/"/>
@@ -49,4 +49,7 @@
 	<dubbo:application name="taotao-manager-web"/>
 	<dubbo:registry protocol="zookeeper" address="47.106.154.159:2181"/>
 	<dubbo:reference interface="com.taotao.intreface.TbItemService" id="tbItemService" />
+	<dubbo:reference interface="com.taotao.intreface.TbItemCatService" id="tbItemCatService" />
+
+
 </beans>

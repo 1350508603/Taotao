@@ -1,11 +1,14 @@
 package com.taotao.controllers;
 
+import com.taoato.util.TaotaoResult;
 import com.taotao.intreface.TbItemService;
 import com.taotao.pojo.EasyUIDataGridResult;
+import com.taotao.pojo.TbItem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
@@ -34,5 +37,11 @@ public class ItemControllers {
     public EasyUIDataGridResult llal(Integer page, Integer rows){
 
         return tbItemService.gteItemList(page,rows);
+    }
+    @RequestMapping(value = "/item/save",method = RequestMethod.POST)
+    @ResponseBody
+    public TaotaoResult taotaoResult(TbItem item,String desc){
+            TaotaoResult taotaoResult=tbItemService.addItem(item,desc);
+        return taotaoResult;
     }
 }

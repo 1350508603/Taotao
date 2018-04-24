@@ -95,5 +95,6 @@
 	<dubbo:protocol name="dubbo" port="20880" />
 	<!-- 声明需要暴露的服务接口 -->
 	<dubbo:service interface="com.taotao.intreface.TbItemService" ref="tbItemServiceimpl" timeout="300000"/>
+	<dubbo:service interface="com.taotao.intreface.TbItemCatService" ref="tbItemCatServiceimpl" timeout="300000"/>
 
 </beans>

@@ -1,7 +1,7 @@
 package com.taotao.context.service.impl;
 
+import com.alibaba.druid.support.json.JSONUtils;
 import com.alibaba.fastjson.JSON;
-import com.taoato.util.JsonUtils;
 import com.taotao.context.service.ContextService;
 import com.taotao.jedis.JediClient;
 import com.taotao.mapper.TbContentMapper;
@@ -32,7 +32,7 @@ public class ContextServiceimpl  implements ContextService {
 
             if(StringUtils.isNoneBlank(josn)){
 
-                List<TbContent> list= JsonUtils.jsonToList(josn,TbContent.class);
+                List<TbContent> list= JSONUtils.jsonToList(josn,TbContent.class);
 
                 return  list;
 
