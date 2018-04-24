@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	   xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+	   http://code.alibabatech.com/schema/dubbo
+	   http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.2.xsd
+		http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+		http://www.springframework.org/schema/mvc
+        	http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+	<!-- 配置数据源 -->
+	<!-- 加载配置文件 -->
+<!--	<context:property-placeholder location="classpath:properties/*.properties" />
+
+	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
+		  destroy-method="close">
+		<property name="url" value="${url}"/>
+		<property name="username" value="${username}"/>
+		<property name="password" value="${password}"/>
+		<property name="driverClassName" value="${driver}"/>
+		<property name="maxActive" value="10"/>
+		<property name="minIdle" value="5"/>
+	</bean>-->
+
+
+
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://127.0.0.1:3306/taotao" />
+		<property name="username" value="root" />
+		<property name="password" value="root" />
+	</bean>
+
+	<!-- 配置sqlSessionFactory -->
+	<bean id="sqlSessionfactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<!-- 引入数据源 -->
+		<property name="dataSource" ref="dataSource" />
+		<!--引入mybatis核心文件 -->
+		<property name="configLocation" value="classpath:mybatis/mybatis-cofig.xml" />
+	</bean>
+
+	<!-- 自动数据映射器 -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.taotao.mapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionfactory" />
+	</bean>
+
+	<!-- 配置注解 -->
+	<context:component-scan base-package="com.taotao.sso.service.impl" />
+
+	<!-- 声明式事务 -->
+	<!-- 定义事务管理器Bean，并为其注入数据源Bean -->
+	<!--<bean id="transactionMapper"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="DataSource" />
+	</bean>-->
+	
+		<!-- 配置事务增强，绑定事务管理器并针对不同方法定义事务规则  -->
+		<!--  <tx:advice id="txAdvice" transaction-manager="transactionMapper">
+			<tx:attributes>
+				<tx:method name="find*" propagation="SUPPORTS"/>
+				<tx:method name="get*" propagation="SUPPORTS"/>
+				<tx:method name="add*" propagation="REQUIRED"/>
+				<tx:method name="update*" propagation="REQUIRED"/>
+				<tx:method name="motify*" propagation="REQUIRED"/>
+				<tx:method name="del*" propagation="REQUIRED"/>
+				<tx:method name="create*" propagation="REQUIRED"/>
+				<tx:method name="*" propagation="SUPPORTS"/>
+			</tx:attributes>
+		</tx:advice>  
+	
+	&lt;!&ndash; 配置切面，将事务增强与方法切入点组合  &ndash;&gt;
+		 <aop:config>
+			<aop:pointcut expression="execution(public * com.wyj.ssm.Service.impl.*.*(..))" id="pointcut"/>
+			<aop:advisor advice-ref="txAdvice" pointcut-ref="pointcut"/>
+		</aop:config> -->
+
+	<!-- 发布dubbo服务 -->
+	<!-- 提供方应用信息，用于计算依赖关系 -->
+	<dubbo:application name="taotao-manager" />
+	<!-- 注册中心的地址 -->
+	<dubbo:registry protocol="zookeeper" address="47.106.154.159:2181" />
+	<!-- 用dubbo协议在20880端口暴露服务 -->
+	<dubbo:protocol name="dubbo" port="20880" />
+	<!-- 声明需要暴露的服务接口 -->
+	<!--<dubbo:service interface="com.taotao.service.ItemService" ref="itemServiceimpl" timeout="300000"/>-->
+
+</beans>
