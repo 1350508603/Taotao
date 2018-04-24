@@ -10,10 +10,8 @@
           <element id="archive" name="taotao-manager-intreface-1.0-SNAPSHOT.jar">
             <element id="module-output" name="taotao-manager-intreface" />
           </element>
-          <element id="archive" name="pagehelper-3.4.2-fix.jar">
-            <element id="module-output" name="pagehelper" />
-          </element>
-          <element id="library" level="project" name="Maven: com.github.jsqlparser:jsqlparser:0.9" />
+          <element id="library" level="project" name="Maven: com.github.pagehelper:pagehelper:5.1.4" />
+          <element id="library" level="project" name="Maven: com.github.jsqlparser:jsqlparser:1.0" />
           <element id="archive" name="taotao-manager-pojo-1.0-SNAPSHOT.jar">
             <element id="module-output" name="taotao-manager-pojo" />
           </element>
