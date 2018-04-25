@@ -38,6 +38,12 @@
             <artifactId>commons-fileupload</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.taotao</groupId>
+            <artifactId>taotao-context-interface</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
 

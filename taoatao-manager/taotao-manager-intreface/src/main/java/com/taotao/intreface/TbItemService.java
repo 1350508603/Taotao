@@ -1,6 +1,6 @@
 package com.taotao.intreface;
 
-import com.taoato.util.TaotaoResult;
+import com.taotao.pojo.TaotaoResult;
 import com.taotao.pojo.EasyUIDataGridResult;
 import com.taotao.pojo.TbItem;
 

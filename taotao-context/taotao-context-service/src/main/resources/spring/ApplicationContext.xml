@@ -95,5 +95,5 @@
 	<dubbo:protocol name="dubbo" port="20887" />
 	<!-- 声明需要暴露的服务接口 -->
     <dubbo:service interface="com.taotao.context.service.ContextService" ref="contextServiceimpl" timeout="300000"/>
-
+	<dubbo:service interface="com.taotao.context.service.ContentCategoryService" ref="contentCategoryServiceImpl" timeout="300000"/>
 </beans>

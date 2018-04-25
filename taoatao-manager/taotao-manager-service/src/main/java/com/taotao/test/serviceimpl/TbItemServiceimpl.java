@@ -3,7 +3,7 @@ package com.taotao.test.serviceimpl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.taoato.util.IDUtils;
-import com.taoato.util.TaotaoResult;
+import com.taotao.pojo.TaotaoResult;
 import com.taotao.intreface.TbItemService;
 import com.taotao.mapper.TbItemDescMapper;
 import com.taotao.mapper.TbItemMapper;
