@@ -17,12 +17,8 @@
         <option value="$PROJECT_DIR$/taotao-porta-web/pom.xml" />
         <option value="$PROJECT_DIR$/taoatao-manager/taotao-manager-intreface/pom.xml" />
         <option value="$PROJECT_DIR$/pagehelper-fix/pagehelper/pom.xml" />
+        <option value="$PROJECT_DIR$/fastdfs_client/pom.xml" />
       </list>
-    </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/taoatao-manager/taotao-manger-interface/pom.xml" />
-      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.7" project-jdk-type="JavaSDK" />

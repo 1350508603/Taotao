@@ -13,6 +13,10 @@
           <element id="archive" name="taotao-manager-pojo-1.0-SNAPSHOT.jar">
             <element id="module-output" name="taotao-manager-pojo" />
           </element>
+          <element id="archive" name="pagehelper-3.4.2-fix.jar">
+            <element id="module-output" name="pagehelper" />
+          </element>
+          <element id="library" level="project" name="Maven: com.github.jsqlparser:jsqlparser:0.9" />
           <element id="archive" name="taotao-context-interface-1.0-SNAPSHOT.jar">
             <element id="module-output" name="taotao-context-interface" />
           </element>
@@ -23,8 +27,6 @@
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.32" />
           <element id="library" level="project" name="Maven: com.github.miemiedev:mybatis-paginator:1.2.15" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.2" />
-          <element id="library" level="project" name="Maven: com.github.pagehelper:pagehelper:5.1.4" />
-          <element id="library" level="project" name="Maven: com.github.jsqlparser:jsqlparser:1.0" />
           <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.3.2" />
           <element id="library" level="project" name="Maven: com.alibaba:druid:1.0.18" />
           <element id="library" level="project" name="Maven: commons-dbcp:commons-dbcp:1.4" />

@@ -3,14 +3,10 @@ package com.taotao.test.serviceimpl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.taoato.util.IDUtils;
-import com.taotao.pojo.TaotaoResult;
+import com.taotao.pojo.*;
 import com.taotao.intreface.TbItemService;
 import com.taotao.mapper.TbItemDescMapper;
 import com.taotao.mapper.TbItemMapper;
-import com.taotao.pojo.EasyUIDataGridResult;
-import com.taotao.pojo.TbItem;
-import com.taotao.pojo.TbItemDesc;
-import com.taotao.pojo.TbItemExample;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -70,6 +66,38 @@ public class TbItemServiceimpl implements TbItemService{
 
             return TaotaoResult.ok();
 
-    };
+    }
+
+        /*
+        修改
+            */
+    public TaotaoResult updateItem(TbItem tbItem) {
+        // 填充属性
+        tbItem.setUpdated(new Date());
+        //更新内容
+        tbItemMapper.updateByPrimaryKey(tbItem);
+        //返回结果
+        return TaotaoResult.ok();
+    }
+
+
+    public TaotaoResult deleteItem(String ids) {
+        String[] idList = ids.split(",");
+        for(String id : idList){
+            //删除内容
+            tbItemMapper.deleteByPrimaryKey(Long.valueOf(id));
+        }
+        //返回结果
+        return TaotaoResult.ok();
+    }
+
+
+    public TaotaoResult getItem(long id) {
+        TbItem item = tbItemMapper.selectByPrimaryKey(id);
+        return TaotaoResult.ok(item);
+    }
+
+
+
 
 }

@@ -45,4 +45,29 @@ public class ItemControllers {
             TaotaoResult taotaoResult=tbItemService.addItem(item,desc);
         return taotaoResult;
     }
+
+
+    @RequestMapping("/rest/item/update")
+    @ResponseBody
+    public TaotaoResult updateItem(TbItem item){
+        TaotaoResult result = tbItemService.updateItem(item);
+        return result;
+    }
+
+    @RequestMapping("/rest/item/delete")
+    @ResponseBody
+    public TaotaoResult deleteItem(String ids){
+        TaotaoResult result = tbItemService.deleteItem(ids);
+        return result;
+    }
+    //获取单个内容信息
+    @RequestMapping("/rest/item/query/")
+    @ResponseBody
+    public TaotaoResult getItem(Long id){
+        TaotaoResult result = tbItemService.getItem(id);
+        return result;
+    }
+
+
+
 }
