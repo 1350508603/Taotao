@@ -61,7 +61,7 @@ public class ItemControllers {
         return result;
     }
     //获取单个内容信息
-    @RequestMapping("/rest/item/query/")
+    @RequestMapping("/rest/page/item-edit")
     @ResponseBody
     public TaotaoResult getItem(Long id){
         TaotaoResult result = tbItemService.getItem(id);

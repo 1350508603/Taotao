@@ -12,13 +12,22 @@
           <element id="archive" name="taotao-common-1.0-SNAPSHOT.jar">
             <element id="module-output" name="taotao-common" />
           </element>
+          <element id="library" level="project" name="Maven: com.alibaba:fastjson:1.2.25" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.4.2" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.4.0" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.4.2" />
           <element id="archive" name="taotao-context-interface-1.0-SNAPSHOT.jar">
             <element id="module-output" name="taotao-context-interface" />
           </element>
-          <element id="library" level="project" name="Maven: com.alibaba:fastjson:1.2.41" />
+          <element id="archive" name="taotao-search-interface-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="taotao-search-interface" />
+          </element>
+          <element id="library" level="project" name="Maven: org.apache.solr:solr-solrj:4.10.3" />
+          <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpclient:4.3.1" />
+          <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpcore:4.3" />
+          <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpmime:4.3.1" />
+          <element id="library" level="project" name="Maven: org.codehaus.woodstox:wstx-asl:3.2.7" />
+          <element id="library" level="project" name="Maven: org.noggit:noggit:0.5" />
           <element id="archive" name="fastdfs_client-1.25.jar">
             <element id="module-output" name="fastdfs_client" />
           </element>

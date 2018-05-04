@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
-
+import com.alibaba.fastjson.JSON;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -21,7 +21,7 @@ public class PictureController {
 
     @RequestMapping("/pic/upload")
     @ResponseBody
-    public Map uploadFile(MultipartFile uploadFile) {
+    public String uploadFile(MultipartFile uploadFile) {
         Map result = new HashMap();
         try {
             //1.接收上传的文件
@@ -34,12 +34,12 @@ public class PictureController {
             url = IMAGE_SERVER_URL + url;
             result.put("error", 0);
             result.put("url", url);
-            return result;
+            return JSON.toJSONString(result);
         } catch (Exception e) {
             e.printStackTrace();
             result.put("error", 0);
             result.put("message", "上传图片失败！");
-            return result;
+            return JSON.toJSONString(result);
         }
     }
 }

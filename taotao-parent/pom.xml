@@ -7,7 +7,7 @@
   <groupId>com.taotao</groupId>
   <artifactId>taotao-parent</artifactId>
   <version>1.0-SNAPSHOT</version>
-   <packaging>pom</packaging>
+    <packaging>pom</packaging>
   <name>taotao-parent</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
@@ -41,10 +41,18 @@
      <zookeeper.version>3.4.7</zookeeper.version>
      <zkclient.version>0.1</zkclient.version>
      <jedis.version>2.7.2</jedis.version>
+      <solrj.version>4.10.3</solrj.version>
+    <fastjson.version>1.2.25</fastjson.version>
   </properties>
 
   <dependencyManagement>
   <dependencies>
+
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
+      <version>${fastjson.version}</version>
+    </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -177,6 +185,14 @@
       <artifactId>zkclient</artifactId>
       <version>${zkclient.version}</version>
     </dependency>
+
+    <!--solr-->
+    <dependency>
+      <groupId>org.apache.solr</groupId>
+      <artifactId>solr-solrj</artifactId>
+      <version>${solrj.version}</version>
+    </dependency>
+
 
     <!-- JSP相关 -->
     <dependency>

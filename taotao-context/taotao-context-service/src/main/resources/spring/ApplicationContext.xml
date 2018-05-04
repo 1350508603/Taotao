@@ -42,6 +42,8 @@
 		<property name="password" value="root" />
 	</bean>
 
+
+
 	<!-- 配置sqlSessionFactory -->
 	<bean id="sqlSessionfactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<!-- 引入数据源 -->
@@ -92,7 +94,7 @@
 	<!-- 注册中心的地址 -->
 	<dubbo:registry protocol="zookeeper" address="47.106.154.159:2181" />
 	<!-- 用dubbo协议在20880端口暴露服务 -->
-	<dubbo:protocol name="dubbo" port="20887" />
+	<dubbo:protocol name="dubbo" port="20881" />
 	<!-- 声明需要暴露的服务接口 -->
     <dubbo:service interface="com.taotao.context.service.ContextService" ref="contextServiceimpl" timeout="300000"/>
 	<dubbo:service interface="com.taotao.context.service.ContentCategoryService" ref="contentCategoryServiceImpl" timeout="300000"/>

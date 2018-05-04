@@ -30,4 +30,6 @@ public interface TbContentCategoryMapper {
     int updateByPrimaryKeySelective(TbContentCategory record);
 
     int updateByPrimaryKey(TbContentCategory record);
+
+    long saveAndGetId(TbContentCategory record);
 }

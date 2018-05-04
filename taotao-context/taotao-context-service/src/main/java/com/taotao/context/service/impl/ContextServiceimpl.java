@@ -97,6 +97,7 @@ public class ContextServiceimpl  implements ContextService {
         //添加
         tbContentMapper.insert(content);
         //返回结果
+        jediClient.hdel("INDEX-CONTEXT",content.getCategoryId().toString());
         return TaotaoResult.ok();
     }
 
@@ -107,6 +108,7 @@ public class ContextServiceimpl  implements ContextService {
         //更新内容
         tbContentMapper.updateByPrimaryKey(content);
         //返回结果
+        jediClient.hdel("INDEX-CONTEXT",content.getCategoryId().toString());
         return TaotaoResult.ok();
     }
 
@@ -118,6 +120,7 @@ public class ContextServiceimpl  implements ContextService {
             tbContentMapper.deleteByPrimaryKey(Long.valueOf(id));
         }
         //返回结果
+        jediClient.hdel("INDEX-CONTEXT",ids+"");
         return TaotaoResult.ok();
     }
 

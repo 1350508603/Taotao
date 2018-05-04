@@ -50,7 +50,7 @@ var TT = TAOTAO = {
         if (val == 1){
             return '正常';
         } else if(val == 2){
-        	return '<span style="color:red;">下架</span>';
+        	return '<span style="color:#ff1713;">下架</span>';
         } else {
         	return '未知';
         }

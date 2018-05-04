@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.taotao.pojo.EasyUITreeNode;
 
 import java.util.List;
+import com.taotao.pojo.TaotaoResult;
 
 /**
  * Created by admin on 2018/4/24.
@@ -26,4 +27,26 @@ public class ContentCategoryController {
 
         return list;
     }
+
+    @RequestMapping("/content/category/create")
+    @ResponseBody
+    public TaotaoResult addContentCategory(Long parentId,String name){
+        TaotaoResult taotaoResult = contentCategoryService.addContentCategory(parentId, name);
+        return taotaoResult;
+    }
+
+    @RequestMapping("/content/category/update")
+    @ResponseBody
+    public TaotaoResult updateContentCategory(Long id,String name){
+        TaotaoResult taotaoResult = contentCategoryService.updateContentCategory(id, name);
+        return taotaoResult;
+    }
+
+    @RequestMapping("/content/category/delete/")
+    @ResponseBody
+    public TaotaoResult deleteContentCategory(Long id){
+        TaotaoResult taotaoResult = contentCategoryService.deleteContentCategory(id);
+        return taotaoResult;
+    }
+
 }

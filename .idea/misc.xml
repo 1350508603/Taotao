@@ -5,6 +5,8 @@
     <file type="web" url="file://$PROJECT_DIR$/taotao-context/taotao-context-service" />
     <file type="web" url="file://$PROJECT_DIR$/taotao-manager-web" />
     <file type="web" url="file://$PROJECT_DIR$/taotao-porta-web" />
+    <file type="web" url="file://$PROJECT_DIR$/taotao-search-web" />
+    <file type="web" url="file://$PROJECT_DIR$/taotao-search/taotao-search-service" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -18,6 +20,10 @@
         <option value="$PROJECT_DIR$/taoatao-manager/taotao-manager-intreface/pom.xml" />
         <option value="$PROJECT_DIR$/pagehelper-fix/pagehelper/pom.xml" />
         <option value="$PROJECT_DIR$/fastdfs_client/pom.xml" />
+        <option value="$PROJECT_DIR$/taotao-search/taotao-search-interface/pom.xml" />
+        <option value="$PROJECT_DIR$/taotao-search/taotao-search-service/pom.xml" />
+        <option value="$PROJECT_DIR$/taotao-search/pom.xml" />
+        <option value="$PROJECT_DIR$/taotao-search-web/pom.xml" />
       </list>
     </option>
   </component>
