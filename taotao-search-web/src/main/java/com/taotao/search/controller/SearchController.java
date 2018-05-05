@@ -25,10 +25,6 @@ public class SearchController {
     @RequestMapping("/search")
     public String search(@RequestParam("q") String queryString,
                          @RequestParam(defaultValue = "1") Integer page, HttpSession session) throws Exception{
-
-
-
-
             //调用服务执行查询
             SearchResult searchResult = searchService.search(queryString, page, SEARCH_RESULT_ROWS);
             //把结果传递给页面

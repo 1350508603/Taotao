@@ -9,8 +9,12 @@ import com.taotao.mapper.TbItemDescMapper;
 import com.taotao.mapper.TbItemMapper;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jms.core.JmsTemplate;
+import org.springframework.jms.core.MessageCreator;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+import javax.jms.*;
 import java.util.Date;
 import java.util.List;
 
@@ -24,6 +28,12 @@ public class TbItemServiceimpl implements TbItemService{
     private TbItemMapper tbItemMapper;
     @Autowired
     private TbItemDescMapper  tbItemDescMapper;
+
+    @Autowired
+    private JmsTemplate jmsTemplate;
+    @Resource(name="itemAddTopic")
+    private Destination destination;
+
 
     public EasyUIDataGridResult gteItemList(int page , int rows){
         PageHelper.startPage(page,rows);
@@ -44,7 +54,7 @@ public class TbItemServiceimpl implements TbItemService{
 
     public TaotaoResult addItem(TbItem item, String decs){
         //生成一个以毫秒加2位数的id
-       long id= IDUtils.genItemId();
+       final long id= IDUtils.genItemId();
         //添加id
        item.setId(id);
        //商品状态
@@ -64,7 +74,17 @@ public class TbItemServiceimpl implements TbItemService{
 
         tbItemDescMapper.insert(tbItemDesc);
 
-            return TaotaoResult.ok();
+        //发送activemq消息
+        jmsTemplate.send(destination,new MessageCreator() {
+
+
+            public Message createMessage(Session session) throws JMSException {
+                TextMessage textMessage = session.createTextMessage(id+"");
+                return textMessage;
+            }
+        });
+
+        return TaotaoResult.ok();
 
     }
 
