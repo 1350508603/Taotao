@@ -14,7 +14,7 @@
 <body>
 <div class="w" id="logo">
     <div>
-    	<a href="http://localhost:8082">
+    	<a href="http://localhost:8071">
     		<img src="/images/taotao-logo.gif" alt="淘淘商城" width="170" height="60"/>
     	</a> <b></b>
     </div>
@@ -27,7 +27,7 @@
         </ul>
         <div class="extra">
         <span>我已经注册，现在就&nbsp;
-        	<a href="http://localhost:8088/page/login" class="flk13">登录</a>
+        	<a href="http://localhost:8071/login" class="flk13">登录</a>
         </span>
         </div>
     </div>
@@ -172,9 +172,11 @@
 	            	
 		},
 		doSubmit:function() {
+
 			$.post("/user/register",$("#personRegForm").serialize(), function(data){
 				if(data.status == 200){
 					alert('用户注册成功，请登录！');
+
 					REGISTER.login();
 				} else {
 					alert("注册失败！");
@@ -182,7 +184,7 @@
 			});
 		},
 		login:function() {
-			 location.href = "/page/login";
+			 location.href = "/login";
 			 return false;
 		},
 		reg:function() {

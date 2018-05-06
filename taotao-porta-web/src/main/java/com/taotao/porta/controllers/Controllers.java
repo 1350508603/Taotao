@@ -26,8 +26,8 @@ import java.util.List;
 
 @Controller
 public class Controllers {
-       @Autowired
-       private ContextService contextService;
+    @Autowired
+    private ContextService contextService;
     @Value("${AD1_CATEGORY_ID}")
     private Long AD1_CATEGORY_ID;
     @Value("${AD1_WIDTH}")
@@ -59,12 +59,8 @@ public  ModelAndView   contro(ModelAndView modelAndView, HttpSession session){
     }
     //把列表转换成json数据
       String alllist= JSON.toJSONString(ad1Nodes);
-
     //把json数据传递给页面
-
-
-     modelAndView.addObject("ad1",alllist);
-
+    modelAndView.addObject("ad1",alllist);
     session.setAttribute("ad1",contentList);
     modelAndView.setViewName("index");
     return modelAndView;

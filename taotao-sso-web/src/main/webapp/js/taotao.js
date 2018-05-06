@@ -1,11 +1,11 @@
 var TT = TAOTAO = {
 	checkLogin : function(){
-		var _ticket = $.cookie("TT_TOKEN");
+		var _ticket = $.cookie("TT-tock");
 		if(!_ticket){
 			return ;
 		}
 		$.ajax({
-			url : "http://localhost:8084/user/token/" + _ticket,
+			url : "http://localhost:8071/user/tock/" + _ticket,
 			dataType : "jsonp",
 			type : "GET",
 			success : function(data){
@@ -20,6 +20,7 @@ var TT = TAOTAO = {
 }
 
 $(function(){
+	alert(3858)
 	// 查看是否已经登录，如果已经登录查询登录信息
 	TT.checkLogin();
 });
